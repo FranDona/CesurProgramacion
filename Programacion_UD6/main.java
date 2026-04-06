@@ -38,7 +38,29 @@ public class main {
         }
     
         //MENU ARRAY
+        public static void agregarArray() {
+            for (int i = 0; i < estudiantesArray.length; i++) {
+                if (estudiantesArray[i] == null) {
 
+                    System.err.println("Nombre: ");
+                    String nombre = sc.nextLine();
+
+                    System.err.println("Edad: ");
+                    int edad = sc.nextInt();
+
+                    System.err.println("Nota: ");
+                    double nota = sc.nextDouble();
+                    sc.nextLine();
+                    
+                    estudiantesArray[i] = new Estudiante(nombre, edad, nota);
+                    System.out.println("Se ha añadido el estudiante.");
+                    return;
+                }
+            }
+            System.out.println("Array Completo");
+        }
+
+        
 
 
         //MENU ARRAYLIST
