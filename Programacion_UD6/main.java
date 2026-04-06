@@ -5,7 +5,7 @@ public class main {
 
     static Scanner sc = new Scanner(System.in);
 
-    // Array fijo de 3 estudiantes
+    // Array fijo para 3 estudiantes
     static Estudiante[] estudiantesArray = new Estudiante[3];
 
     // ArrayList dinámico
@@ -16,10 +16,10 @@ public class main {
         int opcion;
 
         do {
-            System.out.println("\n--- MENÚ PRINCIPAL ---");
+            System.out.println("\nMENÚ PRINCIPAL");
             System.out.println("1. Usar Array");
             System.out.println("2. Usar ArrayList");
-            System.out.println("0. Salir");
+            System.out.println("0. Cerrar");
             System.out.print("Opción: ");
             opcion = sc.nextInt();
             sc.nextLine();
@@ -35,7 +35,7 @@ public class main {
 
         } while (opcion != 0);
 
-        System.out.println("Programa finalizado.");
+        System.out.println("Programa cerrado.");
     }
 
     // MENÚ ARRAY
@@ -43,7 +43,7 @@ public class main {
         int opcion;
 
         do {
-            System.out.println("\n--- SUBMENÚ ARRAY ---");
+            System.out.println("\nSUBMENÚ ARRAY");
             System.out.println("1. Agregar estudiante");
             System.out.println("2. Mostrar estudiantes");
             System.out.println("0. Volver");
@@ -99,9 +99,9 @@ public class main {
 
         do {
             System.out.println("\nSUBMENÚ ARRAYLIST");
-            System.out.println("1. Agregar estudiante");
-            System.out.println("2. Mostrar estudiantes");
-            System.out.println("3. Eliminar estudiante");
+            System.out.println("1. Añadir estudiante");
+            System.out.println("2. Ver estudiantes");
+            System.out.println("3. Borrar estudiante");
             System.out.println("4. Buscar estudiante");
             System.out.println("0. Volver");
             System.out.print("Opción: ");
@@ -154,11 +154,11 @@ public class main {
         for (Estudiante e : estudiantesList) {
             if (e.getNombre().equalsIgnoreCase(nombre)) {
                 estudiantesList.remove(e);
-                System.out.println("Estudiante eliminado.");
+                System.out.println("Estudiante borrado.");
                 return;
             }
         }
-        System.out.println("No encontrado.");
+        System.out.println("No se encuentra.");
     }
 
     public static void buscarList() {
@@ -171,6 +171,6 @@ public class main {
                 return;
             }
         }
-        System.out.println("No encontrado.");
+        System.out.println("No se encuentra.");
     }
 }
